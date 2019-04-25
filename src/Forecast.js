@@ -1,4 +1,6 @@
 import React from 'react';
+import './Forecast.css';
+import icoImgs from './Icons';
 
 const Forecast = ({ forecast }) => {
 
@@ -22,15 +24,20 @@ const Forecast = ({ forecast }) => {
     return `${hours}:${minutes}`;
   }
 
-
-  const date = new Date(forecast.dt_txt);
+  const date = new Date(forecast.date);
   const weekDay = getWeekDay(date.getDay());
   const monthDay = getMonthDay(date.getDate());
   const monthName = getMonthName(date.getMonth());
   const time = getTime(date.getHours(), date.getMinutes());
+  const classDayNight = forecast.timeofday === 'd' ? 'day-class' : 'night-class';
+
+  const icoIndex = ['01d', '02d', '03d', '04d', '09d', '10d', '11d', '13d', '01n', '02n', '03n', '04n', '09n', '10n', '11n', '13n'];
+
   return (
     <div className="forecast">
-      {monthDay} {monthName} {time}, {weekDay}: {Math.round(forecast.main.temp - 273.15)}°C
+      <div className={classDayNight}>{monthDay} {monthName} {time}, {weekDay}</div>
+      <img src={icoImgs[icoIndex.indexOf(forecast.icon)]} alt='' title='' />
+      {Math.round(forecast.temp - 273.15)}&deg;C / Wind {forecast.wind} m/s
     </div>
   );
 }

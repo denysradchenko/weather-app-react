@@ -1,0 +1,14 @@
+.day-class,
+.night-class {
+  display: inline-block;
+  margin-right: 10px;
+  width: 50%;
+}
+
+.day-class {
+  background-color: #fff7e3;
+}
+
+.night-class {
+  background-color: #e8edf3;
+}

@@ -1,0 +1,9 @@
+.Weather {
+  margin: 0 auto;
+  width: 50%;
+}
+
+h1.city-name-country {
+  text-align: center;
+  margin: 20px 0;
+}
