@@ -33,10 +33,12 @@ const Forecast = ({ forecast }) => {
 
   const icoIndex = ['01d', '02d', '03d', '04d', '09d', '10d', '11d', '13d', '01n', '02n', '03n', '04n', '09n', '10n', '11n', '13n'];
 
+  const icoImg = icoImgs[icoIndex.indexOf(forecast.icon)];
+
   return (
     <div className="forecast">
       <div className={classDayNight}>{monthDay} {monthName} {time}, {weekDay}</div>
-      <img src={icoImgs[icoIndex.indexOf(forecast.icon)]} alt='' title='' />
+      <img src={icoImg} alt='' title='' />
       {Math.round(forecast.temp - 273.15)}&deg;C / Wind {forecast.wind} m/s
     </div>
   );
