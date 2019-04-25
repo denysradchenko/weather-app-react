@@ -37,9 +37,16 @@ const Forecast = ({ forecast }) => {
 
   return (
     <div className="forecast">
-      <div className={classDayNight}>{monthDay} {monthName} {time}, {weekDay}</div>
-      <img src={icoImg} alt='' title='' />
-      {Math.round(forecast.temp - 273.15)}&deg;C / Wind {forecast.wind} m/s
+
+      <div className={classDayNight}>
+        {monthDay} {monthName} {time}, {weekDay}
+      </div>
+
+      <div className="forecast-data">
+        <img src={icoImg} alt='' title='' />
+        {Math.round(forecast.temp - 273.15)}&deg;C / Wind {forecast.wind} m/s
+      </div>
+
     </div>
   );
 }

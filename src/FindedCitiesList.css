@@ -20,3 +20,7 @@ ul.FindedCitiesList li:hover {
   background-color: #eee;
   cursor: pointer;
 }
+
+ul.FindedCitiesList img {
+  width: 40px;
+}

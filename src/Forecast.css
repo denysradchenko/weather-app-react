@@ -1,8 +1,17 @@
+.forecast {
+  margin: 0;
+  padding: 0;
+}
+
 .day-class,
 .night-class {
   display: inline-block;
-  margin-right: 10px;
   width: 50%;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .day-class {
@@ -11,4 +20,17 @@
 
 .night-class {
   background-color: #e8edf3;
+}
+
+.forecast .forecast-data {
+  padding-left: 10px;
+  line-height: 50px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.forecast .forecast-data img {
+  height: 50px;
+  margin: 0;
+  padding: 0;
 }
